@@ -14,7 +14,7 @@ void _pop(stack_t **head, unsigned int c)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", c);
 		fclose(var.ptr_file);
 		free(var.line_cont);
-		free_stack(*head);
+		free_stk(*head);
 		exit(EXIT_FAILURE);
 	}
 	temp = *head;
