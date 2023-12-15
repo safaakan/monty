@@ -28,7 +28,7 @@ int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file)
 		}
 		j++;
 	}
-	if (strcmp(op, operation[j].opcode) != 0 || (op && operation[j].opcode == NULL))
+	if (op && operation[j].opcode == NULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", c, op);
 		fclose(file);
 		free(_cont);
