@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -51,11 +52,17 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
-void file_print(stack_t **head, unsigned int line_num);
+void _push(stack_t **head, unsigned int c);
+void _pall(stack_t **head, unsigned int n);
+void _pint(stack_t **head, unsigned int n);
+
+void file_print(stack_t **stack, unsigned int line_num);
 void free_stk(stack_t *head);
-int exec(char *_cont, stack_t **head, unsigned int c, FILE *file);
-void addnode(stack_t **head, int n);
-void addqueue(stack_t **head, int n);
+int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file);
+void add_nod(stack_t **h, int n);
+void add_que(stack_t **h, int n);
+void v_que(stack_t **h, unsigned int c);
 
 #endif

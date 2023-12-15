@@ -1,16 +1,16 @@
 #include "monty.h"
 /**
-* execute - executes the opcode
+* exec - executes the opcode
 * @stack: head linked list - stack
-* @counter: line_counter
+* @c: line_counter
 * @file: poiner to monty file
-* @content: line content
+* @_cont: line content
 * Return: no return
 */
-int exec(char *_cont, stack_t **head, unsigned int c, FILE *file)
+int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file)
 {
 	instruction_t operation[] = {
-				{"push", _push}, {NULL, NULL}
+				{"push", _push}, {"pall", _pall}, {"pint", _pint}
 				};
 	unsigned int j = 0;
 	char *op;

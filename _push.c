@@ -31,7 +31,7 @@ void _push(stack_t **head, unsigned int c)
 		exit(EXIT_FAILURE); }
 	n = atoi(var.arg_val);
 	if (var.stk_que == 0)
-		addnode(head, n);
+		add_nod(head, n);
 	else
-		addqueue(head, n);
+		add_que(head, n);
 }
