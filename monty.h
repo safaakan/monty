@@ -54,5 +54,8 @@ typedef struct instruction_s
 
 void file_print(stack_t **head, unsigned int line_num);
 void free_stk(stack_t *head);
+int exec(char *_cont, stack_t **head, unsigned int c, FILE *file);
+void addnode(stack_t **head, int n);
+void addqueue(stack_t **head, int n);
 
 #endif
