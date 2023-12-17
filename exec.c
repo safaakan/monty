@@ -26,12 +26,6 @@ int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file)
 		{	operation[j].f(stack, c);
 			return (0);
 		}
-		else
-		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", c, op);
-			fclose(file);
-			free_stk(*stack);
-		}
 		j++;
 	}
 	if (op && operation[j].opcode == NULL)
