@@ -10,8 +10,8 @@
 void _pchar(stack_t **head, unsigned int c)
 {
 	stack_t *temp;
+	
 	temp = *head;
-
 	if (!temp)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", c);
