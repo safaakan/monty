@@ -61,8 +61,15 @@ void _nop(stack_t **head, unsigned int c);
 void _pop(stack_t **head, unsigned int c);
 void _swap(stack_t **head, unsigned int c);
 void _add(stack_t **head, unsigned int c);
-void _mul(stack_t **head, unsigned int c);
+void _sub(stack_t **head, unsigned int c);
 void _div(stack_t **head, unsigned int c);
+void _mul(stack_t **head, unsigned int c);
+<<<<<<< HEAD
+void _div(stack_t **head, unsigned int c);
+=======
+void _mod(stack_t **head, unsigned int c);
+
+>>>>>>> a9a32c8cbd012af403895b655a74f2042a6af7da
 
 void file_print(stack_t **stack, unsigned int line_num);
 void free_stk(stack_t *head);

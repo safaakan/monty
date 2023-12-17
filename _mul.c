@@ -18,7 +18,7 @@ void _mul(stack_t **head, unsigned int c)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", c);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", c);
 		fclose(var.ptr_file);
 		free(var.line_cont);
 		free_stk(*head);
