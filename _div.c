@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * _add - adds the top two elements of the stack.
+ * _div - divs the top two elements of the stack.
  * @head: stack head
  * @c: line_number
  * Return: no return
 */
-void _add(stack_t **head, unsigned int c)
+void _div(stack_t **head, unsigned int c)
 {
 	stack_t *temp;
 	int len = 0, i;
@@ -25,7 +25,15 @@ void _add(stack_t **head, unsigned int c)
 		exit(EXIT_FAILURE);
 	}
 	temp = *head;
-	i = temp->n + temp->next->n;
+	if (temp->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", c);
+		fclose(var.ptr_file);
+		free(var.line_cont);
+		free_stk(*head);
+		exit(EXIT_FAILURE);
+	}
+	i = temp->next->n / temp->n;
 	temp->next->n = i;
 	*head = temp->next;
 	free(temp);
