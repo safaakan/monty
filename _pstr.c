@@ -6,20 +6,19 @@
  * @c: line_number
  * Return: no return.
 */
+
 void _pstr(stack_t **head, unsigned int c)
 {
-	stack_t *temp;
-	(void)c;
+stack_t *temp = *head;
 
-	temp = *head;
-	while (temp)
-	{
-		if (temp->n > 127 || temp->n <= 0)
-		{
-			break;
-		}
-		printf("%c", temp->n);
-		temp = temp->next;
-	}
-	printf("\n");
+void c;
+
+while (temp)
+{
+if (temp->n > 127 || temp->n <= 0)
+break;
+printf("%c", temp->n);
+temp = temp->next;
+}
+printf("\n");
 }
