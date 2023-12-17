@@ -71,12 +71,12 @@ void _pstr(stack_t **head, unsigned int c);
 void _rotl(stack_t **head,  __attribute__((unused)) unsigned int c);
 void _rotr(stack_t **head, unsigned int c);
 void _stack(stack_t **head, unsigned int c);
+void _queue(stack_t **head, unsigned int c);
+void add_que(stack_t **head, int c);
 
 void file_print(stack_t **stack, unsigned int line_num);
 void free_stk(stack_t *head);
 int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file);
 void add_nod(stack_t **h, int n);
-void add_que(stack_t **h, int n);
-void v_que(stack_t **h, unsigned int c);
 
 #endif
