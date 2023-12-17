@@ -60,6 +60,8 @@ void _pint(stack_t **head, unsigned int n);
 void _nop(stack_t **head, unsigned int c);
 void _pop(stack_t **head, unsigned int c);
 void _swap(stack_t **head, unsigned int c);
+void _add(stack_t **head, unsigned int c);
+void _mul(stack_t **head, unsigned int c);
 
 
 void file_print(stack_t **stack, unsigned int line_num);
