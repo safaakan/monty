@@ -66,7 +66,7 @@ void _div(stack_t **head, unsigned int c);
 void _mul(stack_t **head, unsigned int c);
 void _div(stack_t **head, unsigned int c);
 void _mod(stack_t **head, unsigned int c);
-
+void _pchar(stack_t **head, unsigned int c)
 
 void file_print(stack_t **stack, unsigned int line_num);
 void free_stk(stack_t *head);
