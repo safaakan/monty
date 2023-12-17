@@ -8,6 +8,6 @@
  */
 void _nop(stack_t **head, unsigned int c)
 {
-	(void)head;
-	(void)c;
+	(void) c;
+	(void) head;
 }
