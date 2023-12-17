@@ -11,7 +11,7 @@ int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file)
 {
 	instruction_t operation[] = {
 				{"push", _push}, {"pall", _pall}, {"pint", _pint},
-				{"pop", _pop}, {"swap", _swap}, {NULL, NULL}
+				{"pop", _pop}, {"swap", _swap}, {"nop", _nop}, {NULL, NULL}
 				};
 	unsigned int j = 0;
 	char *op;
