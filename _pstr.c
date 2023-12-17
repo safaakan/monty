@@ -9,16 +9,15 @@
 
 void _pstr(stack_t **head, unsigned int c)
 {
-stack_t *temp = *head;
+	stack_t *temp = *head;
+	(void) c;
 
-void c;
-
-while (temp)
-{
-if (temp->n > 127 || temp->n <= 0)
-break;
-printf("%c", temp->n);
-temp = temp->next;
-}
-printf("\n");
+	while (temp)
+	{
+		if (temp->n > 127 || temp->n <= 0)
+			break;
+		printf("%c", temp->n);
+		temp = temp->next;
+	}
+	printf("\n");
 }
