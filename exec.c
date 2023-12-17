@@ -14,7 +14,7 @@ int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file)
 				{"pop", _pop}, {"swap", _swap}, {"add", _add},
 				{"nop", _nop}, {"sub", _sub}, {"div", _div},
 				{"mul", _mul}, {"mod", _mod}, {"pchar", _pchar},
-				{"pstr", _pstr},
+				{"pstr", _pstr}, {"rotl", _rotl},
 				{NULL, NULL}
 				};
 	unsigned int j = 0;
