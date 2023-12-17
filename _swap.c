@@ -9,31 +9,31 @@
 
 void _swap(stack_t **head, unsigned int c)
 {
-stack_t *h;
-int len = 0, aux;
+	stack_t *temp;
+	int len = 0, i;
 
-h = *head;
+	temp = *head;
 
 /* Calculate the number of elements in the stack */
-while (h)
-{
-h = h->next;
-len++;
-}
+	while (temp)
+	{
+		temp = temp->next;
+		len++;
+	}
 
 /* Check if there are at least two elements in the stack */
-if (len < 2)
-{
-fprintf(stderr, "L%d: can't swap, stack too short\n", c);
-fclose(bus.file);
-free(bus.content);
-free_stk(*head);
-exit(EXIT_FAILURE);
-}
+	if (len < 2)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", c);
+		fclose(var.ptr_file);
+		free(var.line_cont);
+		free_stk(*head);
+		exit(EXIT_FAILURE);
+	}
 
 /* Swap the top two elements */
-h = *head;
-aux = h->n;
-h->n = h->next->n;
-h->next->n = aux;
+	temp = *head;
+	i = temp->n;
+	temp->n = temp->next->n;
+	temp->next->n = i;
 }
