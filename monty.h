@@ -59,6 +59,9 @@ void _pall(stack_t **head, unsigned int n);
 void _pint(stack_t **head, unsigned int n);
 void _nop(stack_t **head, unsigned int c);
 void _pop(stack_t **head, unsigned int c);
+void _swap(stack_t **head, unsigned int c);
+
+
 void file_print(stack_t **stack, unsigned int line_num);
 void free_stk(stack_t *head);
 int exec(char *_cont, stack_t **stack, unsigned int c, FILE *file);
