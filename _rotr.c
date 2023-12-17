@@ -10,8 +10,7 @@ void _rotr(stack_t **head, unsigned int c)
 {
 	stack_t *current_node;
 	int prev_node_value, temp;
-
-	void c;
+	(void) c;
 
 	if (!head || !*head)
 		return;
